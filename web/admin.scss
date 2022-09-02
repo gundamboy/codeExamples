@@ -1,0 +1,189 @@
+$alert: #dc3545;
+
+.nav-tabs {
+  &.admin-tabs~ {
+    .tab-content {
+      border: 1px solid #dee2e6;
+      padding: 1rem;
+
+      h4 {
+        text-align: left;
+      }
+
+      .row.row-push {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+section {
+  &.application-header {
+    margin-bottom: 3rem;
+
+    .org_name_header {
+      color: #ba8111;
+    }
+
+    .approvalStatus {
+      .appStatus.pending {
+        color: #1779ba;
+      }
+
+      .appStatus.approved {
+        color: #11ba6c;
+      }
+
+      .appStatus.denied {
+        color: #e85353;
+      }
+    }
+  }
+
+  &.controls {
+    text-align: left;
+
+    &.monetary {
+      .material {display: none;}
+    }
+
+    &.material {
+      .monetary {display: none;}
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    textarea {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    .submission-confirmation {
+      padding: 0.5rem;
+      box-sizing: border-box;
+      margin-top: 1rem;
+      //display: none;
+
+      .applicationStatus {
+        font-weight: bold;
+        color: #5e457c
+      }
+
+      &.show {
+        display: block;
+      }
+    }
+
+    .button-wrap {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &.finish {
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        .wrap {
+          justify-content: normal;
+        }
+      }
+
+      .wrap {
+        justify-content: space-between;
+        margin-bottom: 1px;
+        display: flex;
+
+        .btn {
+          cursor: pointer;
+        }
+
+        &:first-child {
+          .btn {width: 33%}
+        }
+
+
+        &:last-child {
+          .btn {width: 49.8%}
+        }
+
+        .approvalStatus.btn {
+          color: #ffffff;
+          border-radius: 0;
+
+          &.approve {
+            background-color: #11ba6c;
+          }
+
+          &.deny {
+            background-color: #e85353;
+          }
+
+          &.save-notes {
+            background-color: #2a5473;
+          }
+
+          &.review {
+            background-color: #2e90a0;
+          }
+
+          &.email {
+            background-color: #1779ba;
+          }
+
+          &.finish {
+            background-color: #2a5473;
+            width: 100%;
+
+            &.disabled {
+              cursor: not-allowed;
+              pointer-events: bounding-box;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// login form stuff
+.loginHeader {
+  text-align: left;
+  margin-bottom: 2rem;
+
+
+  h3 {
+    max-width: 50%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #cccccc;
+  }
+}
+
+form {
+  a.mailto {display: none;}
+
+  &.login {
+    text-align: left;
+    max-width: 50%;
+    margin: 0 auto;
+
+    .form-control {
+      &.invalid {
+
+      }
+      .valid {}
+    }
+
+    .error {
+      margin-top: 1rem;
+      text-align: center;
+
+      p {
+        padding: 1rem;
+        margin: 0;
+      }
+    }
+  }
+}
